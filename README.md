@@ -1,0 +1,3 @@
+- Step 1: Clone code
+- Step 2: yarn
+- Step 3: yarn start and enjoy your code

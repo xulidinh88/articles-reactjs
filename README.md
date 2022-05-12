@@ -12,3 +12,5 @@
 - Styled Components
 - Infinity scroll
 - Craco config( alias path)
+
+![image](https://user-images.githubusercontent.com/65463178/167989993-b66d0c3f-13ae-4cb6-aeb9-bd72a262842b.png)

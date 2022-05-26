@@ -5,10 +5,10 @@ export const ComponentContentAbout = () => {
   return (
     <Wrap>
       <Grid>
-        <div className="about-content"></div>
-        <div className="about-content"></div>
-        <div className="about-content"></div>
-        <div className="about-content"></div>
+        <div className="about-content" />
+        <div className="about-content" />
+        <div className="about-content" />
+        <div className="about-content" />
       </Grid>
     </Wrap>
   );

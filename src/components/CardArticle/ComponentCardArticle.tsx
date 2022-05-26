@@ -11,12 +11,18 @@ export const ComponentCardArticle = (props: IArticle) => {
   const { handleImageOnLoad, css } = useImageOnLoad();
   const [showOverlay, setShowOverlay] = useState<boolean>(false);
 
+  const handleShowOverlay = () => {
+    setShowOverlay(true);
+  };
+  const handleHideOverlay = () => {
+    setShowOverlay(false);
+  };
   return (
     <StyledCardArticle
       className={className}
       showOverlay={showOverlay}
-      onMouseEnter={() => setShowOverlay(true)}
-      onMouseLeave={() => setShowOverlay(false)}
+      onMouseEnter={handleShowOverlay}
+      onMouseLeave={handleHideOverlay}
     >
       <div className="wrap-img">
         <img style={{ ...css.thumbnail }} className="img" alt="Experience picture" />
@@ -32,7 +38,7 @@ export const ComponentCardArticle = (props: IArticle) => {
       ) : (
         <h2 className="title">{title}</h2>
       )}
-      <div className="overlay" onClick={() => handleClickButton(url)}>
+      <div className="overlay" onClick={handleClickButton.bind(this, url)}>
         See more
       </div>
     </StyledCardArticle>

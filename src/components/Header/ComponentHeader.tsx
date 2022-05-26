@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { GrBlog } from 'react-icons/gr';
 import { GiCoffeeMug } from 'react-icons/gi';
 
@@ -16,10 +16,14 @@ export const ComponentHeader = () => {
       <StyledNavbar>
         <ul className="nav-list">
           <li className="nav-item">
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink exact to="/" activeClassName="isActive">
+              Home
+            </StyledLink>
           </li>
           <li className="nav-item">
-            <StyledLink to="/about">About</StyledLink>
+            <StyledLink to="/about" activeClassName="isActive">
+              About
+            </StyledLink>
           </li>
         </ul>
       </StyledNavbar>
@@ -94,9 +98,12 @@ const StyledNavbar = styled.nav`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   text-decoration: none;
   font-size: clamp(1rem, 3rem, 3rem);
   color: ${Colors.HEADING_COLOR};
   font-family: 'Pacifico';
+  &.isActive{
+    color: #ff7b42;
+  }
 `;
